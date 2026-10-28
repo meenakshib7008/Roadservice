@@ -491,3 +491,20 @@ footer {
     cursor: wait;
 }
 
+.admin-link {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.admin-link a {
+    color: #f5a623;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.admin-link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
