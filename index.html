@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadRescue | Road Damage Reporting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>RoadRescue</h1>
+        <p>Report it. Track it. Fix it.</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Better roads start with you.</h2>
+            <p>Help make our roads safer by reporting potholes,
+               cracks and damaged streets.</p>
+
+            <button id="reportButton" onclick="document.getElementById('reportForm').scrollIntoView({ behavior: 'smooth' })">
+    Report Road Damage
+            </button>
+        </section>
+
+        <section class="about">
+            <h2>How It Works</h2>
+            <p>1. Report the damaged road.</p>
+            <p>2. Provide the location and a photo.</p>
+            <p>3. Track the progress of your report.</p>
+            
+<section class="report-section" id="reportForm">
+    <h2>Report Road Damage</h2>
+    <p>Help us identify and repair damaged roads.</p>
+
+    <form id="damageForm">
+        <label for="reporterName">Your Name</label>
+        <input type="text" id="reporterName" placeholder="Enter your name" required>
+
+        <label for="damageType">Type of Damage</label>
+        <select id="damageType" required>
+            <option value="">Select damage type</option>
+            <option value="Pothole">Pothole</option>
+            <option value="Road Crack">Road Crack</option>
+            <option value="Broken Road">Broken Road</option>
+            <option value="Waterlogging">Waterlogging</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="location">Road Location</label>
+        <input type="text" id="location" placeholder="Street, area or landmark" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" rows="4"
+            placeholder="Describe the damage..." required></textarea>
+
+        <label for="photo">Upload a Photo</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <button type="submit">Submit Report</button>
+        <p id="formMessage" role="status"></p>
+    </form>
+</section>
+
+        </section>
+        
+<section class="track-section" id="trackReport">
+    <h2>Track Your Report</h2>
+    <p>Enter your Report ID to check the progress of your complaint.</p>
+
+    <form id="trackForm">
+        <label for="trackId">Report ID</label>
+        <input
+            type="text"
+            id="trackId"
+            placeholder="Example: RR-1729876543210"
+            required
+        >
+        <button type="submit">Track Report</button>
+    </form>
+
+    <div id="trackResult" aria-live="polite"></div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>RoadRescue — Building safer roads together.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

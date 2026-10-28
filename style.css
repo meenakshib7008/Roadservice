@@ -1,0 +1,493 @@
+<link rel="stylesheet" href="style.css">
+
+/* =====================================
+   1. BASIC PAGE SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #17243a;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   2. WEBSITE HEADER
+===================================== */
+
+header {
+    background-color: #101b2d;
+    color: white;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #f5a623;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   3. MAIN CONTENT
+===================================== */
+
+main {
+    width: 84%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+
+/* =====================================
+   4. HERO SECTION
+===================================== */
+
+.hero {
+    background: linear-gradient(135deg, #101b2d, #243b5a);
+    color: white;
+    padding: 65px 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(16, 27, 45, 0.12);
+}
+
+.hero h2 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: #dbe4f0;
+    font-size: 17px;
+}
+
+
+/* =====================================
+   5. REPORT BUTTON
+===================================== */
+
+button {
+    background-color: #f5a623;
+    color: #101b2d;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffc45c;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   6. HOW IT WORKS SECTION
+===================================== */
+
+.about {
+    background-color: white;
+    margin-top: 30px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(16, 27, 45, 0.06);
+}
+
+.about h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #101b2d;
+}
+
+.about p {
+    background-color: #f4f6fa;
+    padding: 14px 18px;
+    margin-top: 12px;
+    border-left: 4px solid #f5a623;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   7. FOOTER
+===================================== */
+
+footer {
+    background-color: #101b2d;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 22px;
+    margin-top: 55px;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   8. MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero {
+        padding: 42px 20px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about {
+        padding: 24px 18px;
+    }
+
+    .about h2 {
+        font-size: 23px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}
+
+/* ROAD DAMAGE REPORT FORM */
+
+.report-section {
+    background: white;
+    margin-top: 30px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(16, 27, 45, 0.06);
+}
+
+.report-section h2 {
+    margin-bottom: 8px;
+}
+
+.report-section > p {
+    margin-bottom: 24px;
+    color: #64748b;
+}
+
+#damageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#damageForm label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#damageForm input,
+#damageForm select,
+#damageForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+    background: white;
+}
+
+#damageForm input:focus,
+#damageForm select:focus,
+#damageForm textarea:focus {
+    outline: 2px solid #f5a623;
+    border-color: transparent;
+}
+
+#formMessage {
+    margin-top: 10px;
+    color: #166534;
+    font-weight: bold;
+}
+
+/* TRACK REPORT SECTION */
+
+.track-section {
+    background: white;
+    margin-top: 30px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(16, 27, 45, 0.06);
+}
+
+.track-section h2 {
+    margin-bottom: 8px;
+}
+
+.track-section > p {
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+#trackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#trackForm label {
+    font-weight: bold;
+}
+
+#trackForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+}
+
+#trackForm input:focus {
+    outline: 2px solid #f5a623;
+    border-color: transparent;
+}
+
+#trackResult {
+    margin-top: 22px;
+}
+
+.report-card {
+    background: #f4f6fa;
+    border-left: 4px solid #f5a623;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+.report-card p {
+    margin-top: 8px;
+}
+
+.status-badge {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ADMIN DASHBOARD */
+
+.admin-welcome {
+    background: linear-gradient(135deg, #101b2d, #243b5a);
+    color: white;
+    padding: 35px;
+    border-radius: 16px;
+}
+
+.admin-welcome h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.admin-welcome a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffc45c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.admin-welcome a:hover {
+    text-decoration: underline;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    border-top: 4px solid #f5a623;
+    box-shadow: 0 5px 20px rgba(16, 27, 45, 0.06);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.admin-reports {
+    background: white;
+    padding: 30px;
+    margin-top: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(16, 27, 45, 0.06);
+}
+
+.admin-reports h2 {
+    margin-bottom: 8px;
+}
+
+.admin-reports > p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.admin-report-card {
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #f5a623;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+.admin-report-card p {
+    margin-top: 8px;
+}
+
+.admin-report-card label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.admin-report-card select {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font: inherit;
+    background: white;
+}
+
+.admin-report-card button {
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+    .admin-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-reports {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ADMIN SEARCH AND FILTERS */
+
+.admin-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.admin-filters input,
+.admin-filters select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    font: inherit;
+    color: #17243a;
+}
+
+.admin-filters input:focus,
+.admin-filters select:focus {
+    outline: 2px solid #f5a623;
+    border-color: transparent;
+}
+
+@media (max-width: 500px) {
+    .admin-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* UPLOADED ROAD DAMAGE PHOTOS */
+
+.report-photo,
+.admin-report-photo {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: left center;
+    margin-top: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f4f6fa;
+}
+
+#damageForm button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+

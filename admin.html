@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadRescue | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>RoadRescue Admin</h1>
+        <p>Road damage management dashboard</p>
+    </header>
+
+    <main>
+        <section class="admin-welcome">
+            <h2>Admin Dashboard</h2>
+            <p>Review reported road damage and manage repair progress.</p>
+            <a href="index.html">← Back to Citizen Homepage</a>
+        </section>
+
+        <section class="admin-stats">
+            <div class="stat-card">
+                <h3>Total Reports</h3>
+                <p id="totalReports">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingReports">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>In Progress</h3>
+                <p id="progressReports">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Resolved</h3>
+                <p id="resolvedReports">0</p>
+            </div>
+        </section>
+
+        <section class="admin-reports">
+            <h2>Reported Road Issues</h2>
+            <p>Review complaints and update their status and priority.</p>
+
+            
+<div class="admin-filters">
+    <input
+        type="search"
+        id="searchReports"
+        placeholder="Search by report ID or location..."
+        aria-label="Search reports"
+    >
+
+    <select id="filterStatus" aria-label="Filter by status">
+        <option value="All">All Statuses</option>
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Resolved">Resolved</option>
+    </select>
+
+    <select id="filterPriority" aria-label="Filter by priority">
+        <option value="All">All Priorities</option>
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+
+    <select id="filterDamage" aria-label="Filter by damage type">
+        <option value="All">All Damage Types</option>
+        <option value="Pothole">Pothole</option>
+        <option value="Road Crack">Road Crack</option>
+        <option value="Broken Road">Broken Road</option>
+        <option value="Waterlogging">Waterlogging</option>
+        <option value="Other">Other</option>
+    </select>
+</div>
+
+<div id="adminReportList">
+    <p>No reports to display yet.</p>
+</div>
+
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>RoadRescue — Administration Panel</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
